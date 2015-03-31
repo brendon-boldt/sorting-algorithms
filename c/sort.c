@@ -6,7 +6,7 @@
 
 
 int main() {
-  int arr[] = {9,3,8,2,5,1,4,3,8,55,2,-1,3,6,865,4,-3533};
+  int arr[] = {9,3,8,2,5,1,4,4,10,11,0,7};
   //int arr[] = {1,3,2};
   //int arr[] = {8,9,5};
   int length = sizeof(arr)/sizeof(int);

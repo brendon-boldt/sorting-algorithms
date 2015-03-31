@@ -10,7 +10,7 @@ void quickSort(int arr[], int length) {
       swap(&arr[0],&arr[1]);
       return;
   }
-  printArray(arr,length);
+
   int pivot = arr[length-1];
   int hi = length-2;
   int lo = 0;
@@ -22,10 +22,10 @@ void quickSort(int arr[], int length) {
       lo++;
     }
   }
+
   if (arr[lo] < pivot)
-    lo++;
+    lo++; 
   swap(&arr[length-1],&arr[lo]);
-  printArray(arr,length);
   quickSort(arr,lo);
   quickSort(arr+lo+1,length-lo-1);
 }
