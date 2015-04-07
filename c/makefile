@@ -5,9 +5,9 @@ EXECUTABLE=c-sort
 SOURCES=$(wildcard ../*sort/*.c)
 MAIN=sort.c
 LIB=array.c
-LIB_OBJ=$(LIB:.c=.o)
+LIB_OBJ=$(LIB:.c=.c.o)
 HEADERS=$(wildcard *.h)
-OBJECTS=$(SOURCES:.c=.o)
+OBJECTS=$(SOURCES:.c=.c.o)
 
 
 all: $(HEADERS) $(LIB) $(SOURCES) $(EXECUTABLE)
@@ -18,7 +18,7 @@ $(EXECUTABLE): $(LIB_OBJ) $(OBJECTS) $(HEADERS)
 $(LIB_OBJ): $(LIB)
 	$(CC) $(CFLAGS) $(LIB) -o $@
 
-.c.o:
+%.c.o : %.c
 	$(CC) $(CFLAGS) $< -o $@
 
 clean:

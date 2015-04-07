@@ -6,14 +6,14 @@
 
 
 int main() {
-  int arr[] = {9,3,8,2,5,1,4,4,10,11,0,7};
+  int arr[] = {0,3,8,2,5,1,4};
   //int arr[] = {1,3,2};
   //int arr[] = {8,9,5};
   int length = sizeof(arr)/sizeof(int);
 
 
   printArray(arr,length);
-  quickSort(arr,length);
+  heapSort(arr,length);
   printArray(arr,length);
 
   return 0;  
